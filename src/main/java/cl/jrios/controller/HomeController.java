@@ -25,6 +25,9 @@ public class HomeController {
 	
 	@GetMapping
 	public String home(ModelMap mapa) {
+		mapa.put("razas", servicioRaza.listar());
+		mapa.put("caracteristicas", servicioCaract.listar());
+		mapa.put("perfiles", servicioPerfil.listar());
 		return "home";
 	}
 }
