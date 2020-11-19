@@ -11,7 +11,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
 	crossorigin="anonymous">
-<title>Inicio</title>
+<title>Resultado de la busqueda</title>
 </head>
 <body>
 
@@ -20,13 +20,13 @@
 			<div class="col">
 				<div class="row my-5">
 					<div class="col">
-						<h1>APP Amores Caninos</h1>
+						<h2>Tu busqueda</h2>
 					</div>
 				</div>
 				<div class="row my-5">
 					<div class="col">
 						<a href="/preferencias">
-							<button type="button" class="btn btn-primary">Busca tu amor</button>
+							<button type="button" class="btn btn-danger">volver</button>
 						</a>
 					</div>
 				</div>

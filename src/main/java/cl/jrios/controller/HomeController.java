@@ -30,4 +30,20 @@ public class HomeController {
 		mapa.put("perfiles", servicioPerfil.listar());
 		return "home";
 	}
+	
+	@GetMapping("/preferencias")
+	public String preferencias(ModelMap mapa) {
+		mapa.put("razas", servicioRaza.listar());
+		mapa.put("caracteristicas", servicioCaract.listar());
+		mapa.put("perfiles", servicioPerfil.listar());
+		return "pages/seleccion-preferencias";
+	}
+	
+	@GetMapping("/busqueda")
+	public String busqueda(ModelMap mapa) {
+		mapa.put("razas", servicioRaza.listar());
+		mapa.put("caracteristicas", servicioCaract.listar());
+		mapa.put("perfiles", servicioPerfil.listar());
+		return "pages/resultados-busqueda";
+	}
 }
