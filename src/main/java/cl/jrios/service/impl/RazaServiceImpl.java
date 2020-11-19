@@ -6,35 +6,35 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cl.jrios.model.Perfil;
-import cl.jrios.repo.IPerfilRepo;
-import cl.jrios.service.IPerfilService;
+import cl.jrios.model.Raza;
+import cl.jrios.repo.IRazaRepo;
+import cl.jrios.service.IRazaService;
 
 @Service
-public class PerfilServiceImpl implements IPerfilService{
-	
+public class RazaServiceImpl implements IRazaService {
+
 	@Autowired
-	private IPerfilRepo repo;
+	private IRazaRepo repo;
 
 	@Override
-	public Perfil registrar(Perfil obj) {
+	public Raza registrar(Raza obj) {
 		return repo.save(obj);
 	}
 
 	@Override
-	public Perfil modificar(Perfil obj) {
+	public Raza modificar(Raza obj) {
 		return repo.save(obj);
 	}
 
 	@Override
-	public List<Perfil> listar() {
+	public List<Raza> listar() {
 		return repo.findAll();
 	}
 
 	@Override
-	public Perfil leerPorId(Integer id) {
-		Optional<Perfil> op = repo.findById(id);
-		return op.isPresent() ? op.get() : new Perfil();
+	public Raza leerPorId(Integer id) {
+		Optional<Raza> op = repo.findById(id);
+		return op.isPresent() ? op.get() : new Raza();
 	}
 
 	@Override
