@@ -24,7 +24,7 @@
 				</div>
 				<div class="row my-5">
 					<div class="col">
-						<form action="busqueda" method="get">
+						<form action="busqueda/raza" method="get">
 							<div class="form-row">
 								<div class="col">
 									<label for="razas_id">Razas</label> <select id="razas_id"
@@ -41,9 +41,12 @@
 										por raza</button>
 								</div>
 							</div>
-
 						</form>
 					</div>
+					
+					
+					
+					
 					<div class="col">
 						<form>
 							<div class="form-row">
@@ -66,7 +69,7 @@
 						</form>
 					</div>
 					<div class="col">
-						<form>
+						<form action="busqueda/genero" method="get">
 							<div class="form-row">
 								<div class="col">
 									<label for="genero_id">Genero</label> <select id="genero_id"
@@ -78,14 +81,14 @@
 							</div>
 							<div class="row my-3">
 								<div class="col">
-									<a class="btn btn-secondary" href="/busqueda" role="button">Buscar
-										por genero</a>
+									<button type="submit" class="btn btn-secondary">Buscar
+										por genero</button>
 								</div>
 							</div>
 						</form>
 					</div>
 					<div class="col">
-						<form>
+						<form action="busqueda/edad" method="get">
 							<div class="form-row">
 								<div class="col">
 									<label for="edad_id">Edad</label> <input id="edad" name="edad"
@@ -94,8 +97,8 @@
 							</div>
 							<div class="row my-3">
 								<div class="col">
-									<a class="btn btn-secondary" href="/busqueda" role="button">Buscar
-										por edad</a>
+									<button type="submit" class="btn btn-secondary">Buscar
+										por edad</button>
 								</div>
 							</div>
 						</form>

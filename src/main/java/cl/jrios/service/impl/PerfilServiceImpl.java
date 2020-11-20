@@ -48,5 +48,24 @@ public class PerfilServiceImpl implements IPerfilService {
 		List<Perfil> lista = repo.findByRazaId(raza_id);
 		return lista;
 	}
+	
+	@Override
+	public List<Perfil> listarPorEdad(Integer edad) {
+		List<Perfil> lista = repo.findByEdad(edad);
+		return lista;
+	}
+	
+	@Override
+	public List<Perfil> listarPorGenero(Integer genero) {
+		String genero_str = null;
+		if(genero == 1) {
+			genero_str = "Hembra";
+		}
+		else if(genero == 2) {
+			genero_str = "Macho";
+		}
+		List<Perfil> lista = repo.findByGenero(genero_str);
+		return lista;
+	}
 
 }
