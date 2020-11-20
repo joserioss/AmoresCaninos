@@ -20,8 +20,34 @@
 			<div class="col">
 				<div class="row my-5">
 					<div class="col">
-						<h2>Tu busqueda</h2>
+						<h2>
+							Tu busqueda:
+						</h2>
 					</div>
+				</div>
+				<div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Nombre</th>
+								<th scope="col">Genero</th>
+								<th scope="col">Edad</th>
+								<th scope="col">Frase</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach var="perfil" items="${perfiles}">
+								<tr>
+									<th scope="row">${perfil.id}</th>
+									<td>${perfil.nombre}</td>
+									<td>${perfil.genero}</td>
+									<td>${perfil.edad}</td>
+									<td>${perfil.frase}</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
 				</div>
 				<div class="row my-5">
 					<div class="col">

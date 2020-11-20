@@ -24,7 +24,7 @@
 				</div>
 				<div class="row my-5">
 					<div class="col">
-						<form>
+						<form action="busqueda" method="get">
 							<div class="form-row">
 								<div class="col">
 									<label for="razas_id">Razas</label> <select id="razas_id"
@@ -37,10 +37,11 @@
 							</div>
 							<div class="row my-3">
 								<div class="col">
-									<a class="btn btn-secondary" href="/busqueda" role="button">Buscar
-										por raza</a>
+									<button type="submit" class="btn btn-secondary">Buscar
+										por raza</button>
 								</div>
 							</div>
+
 						</form>
 					</div>
 					<div class="col">
@@ -106,6 +107,7 @@
 				<a href="/">
 					<button type="button" class="btn btn-danger">volver</button>
 				</a>
+
 				<!-- Modal -->
 				<div class="modal fade" id="exampleModal" tabindex="-1"
 					aria-labelledby="exampleModalLabel" aria-hidden="true">

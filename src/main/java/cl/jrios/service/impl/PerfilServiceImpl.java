@@ -11,8 +11,8 @@ import cl.jrios.repo.IPerfilRepo;
 import cl.jrios.service.IPerfilService;
 
 @Service
-public class PerfilServiceImpl implements IPerfilService{
-	
+public class PerfilServiceImpl implements IPerfilService {
+
 	@Autowired
 	private IPerfilRepo repo;
 
@@ -41,6 +41,12 @@ public class PerfilServiceImpl implements IPerfilService{
 	public boolean eliminar(Integer id) {
 		repo.deleteById(id);
 		return true;
+	}
+
+	@Override
+	public List<Perfil> listarPorRaza(Integer raza_id) {
+		List<Perfil> lista = repo.findByRazaId(raza_id);
+		return lista;
 	}
 
 }
