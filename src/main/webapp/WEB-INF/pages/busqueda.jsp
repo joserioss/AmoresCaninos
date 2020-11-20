@@ -20,34 +20,27 @@
 			<div class="col">
 				<div class="row my-5">
 					<div class="col">
-						<h2>
-							Tu busqueda:
-						</h2>
+						<h2>Tu busqueda:</h2>
 					</div>
 				</div>
 				<div>
-					<table class="table">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Nombre</th>
-								<th scope="col">Genero</th>
-								<th scope="col">Edad</th>
-								<th scope="col">Frase</th>
-							</tr>
-						</thead>
-						<tbody>
-							<c:forEach var="perfil" items="${perfiles}">
-								<tr>
-									<th scope="row">${perfil.id}</th>
-									<td>${perfil.nombre}</td>
-									<td>${perfil.genero}</td>
-									<td>${perfil.edad}</td>
-									<td>${perfil.frase}</td>
-								</tr>
-							</c:forEach>
-						</tbody>
-					</table>
+					<div class="row row-cols-1 row-cols-md-2">
+						<c:forEach var="perfil" items="${perfiles}">
+							<div class="col mb-4">
+								<div class="card">
+									<img src="${perfil.urlImagen}" class="card-img-top" alt="${perfil.nombre}">
+									<div class="card-body">
+										<h5 class="card-title">${perfil.nombre}</h5>
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item">Edad: ${perfil.edad} años</li>
+											<li class="list-group-item">Genero: ${perfil.genero}</li>
+											<li class="list-group-item">Frase: ${perfil.frase}</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</c:forEach>
+					</div>
 				</div>
 				<div class="row my-5">
 					<div class="col">
@@ -56,6 +49,51 @@
 						</a>
 					</div>
 				</div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1"
+					aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Perfiles</h5>
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<table class="table">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">Nombre</th>
+											<th scope="col">Genero</th>
+											<th scope="col">Edad</th>
+											<th scope="col">Frase</th>
+										</tr>
+									</thead>
+									<tbody>
+										<c:forEach var="perfil" items="${perfiles}">
+											<tr>
+												<th scope="row">${perfil.id}</th>
+												<td>${perfil.nombre}</td>
+												<td>${perfil.genero}</td>
+												<td>${perfil.edad}</td>
+												<td>${perfil.frase}</td>
+											</tr>
+										</c:forEach>
+									</tbody>
+								</table>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary"
+									data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>

@@ -24,7 +24,7 @@
 				</div>
 				<div class="row my-5">
 					<div class="col">
-						<form action="busqueda/raza" method="get">
+						<form action="busqueda/raza" method="post">
 							<div class="form-row">
 								<div class="col">
 									<label for="razas_id">Razas</label> <select id="razas_id"
@@ -43,10 +43,7 @@
 							</div>
 						</form>
 					</div>
-					
-					
-					
-					
+					<!-- Filtrado de caracteristica aun no realizado -->
 					<div class="col">
 						<form>
 							<div class="form-row">
@@ -68,8 +65,9 @@
 							</div>
 						</form>
 					</div>
+					<!-- Filtrado de caracteristica aun no realizado -->
 					<div class="col">
-						<form action="busqueda/genero" method="get">
+						<form action="busqueda/genero" method="post">
 							<div class="form-row">
 								<div class="col">
 									<label for="genero_id">Genero</label> <select id="genero_id"
@@ -88,11 +86,11 @@
 						</form>
 					</div>
 					<div class="col">
-						<form action="busqueda/edad" method="get">
+						<form action="busqueda/edad" method="post">
 							<div class="form-row">
 								<div class="col">
 									<label for="edad_id">Edad</label> <input id="edad" name="edad"
-										type="number" class="form-control" placeholder="edad">
+										type="number" class="form-control" placeholder="edad" required>
 								</div>
 							</div>
 							<div class="row my-3">
